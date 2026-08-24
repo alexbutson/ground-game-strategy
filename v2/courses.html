@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Courses — Ground Game Strategy (v2 preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .stage-banner{background:#FF7C3B;color:#331605;text-align:center;font-weight:700;font-size:.82rem;padding:8px 16px;letter-spacing:.06em}
+  .doors{display:grid;grid-template-columns:1.15fr 1.15fr .9fr;gap:24px}
+  .door{border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px}
+  .door .who{font-size:.72rem;font-weight:700;letter-spacing:.14em}
+  .door h3{font-family:var(--serif);font-size:1.35rem;line-height:1.25;margin:0}
+  .door p{font-size:.95rem;line-height:1.55;flex:1;margin:0}
+  .door .cta{font-weight:700;font-size:.92rem}
+  .door-org{background:#fff}
+  .door-org .who{color:var(--blue)} .door-org p{color:var(--slate)} .door-org .cta{color:var(--blue)}
+  .door-you{background:var(--orange)}
+  .door-you .who,.door-you .cta{color:#331605} .door-you h3{color:#2a1202} .door-you p{color:#4a2508}
+  .door-firm{background:transparent;border:1.5px dashed #4a6091}
+  .door-firm .who{color:#8fa3c4} .door-firm h3{color:#dfe7f5;font-size:1.1rem} .door-firm p{color:#8fa3c4;font-size:.85rem} .door-firm .cta{color:var(--orange);font-size:.85rem}
+  .ladder{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 28px}
+  .rung{padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:700;color:#fff}
+  .rung.r1{background:#6b7a94} .rung.r2{background:var(--blue)} .rung.r3{background:var(--navy)} .rung.r4{background:var(--orange);color:#331605}
+  .ladder .ar{color:#b9c2d1;font-weight:700}
+  .cat-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.1em;padding:4px 11px;border-radius:999px;margin-bottom:12px}
+  .cat-core{background:var(--navy);color:#fff} .cat-found{background:var(--blue);color:#fff} .cat-impact{background:#ffe4d3;color:#8a3b0f}
+  .card .meta{font-size:.8rem;font-weight:700;color:var(--blue);margin:0 0 8px}
+  .interest{margin-top:34px;padding:18px 22px;background:#fff7f2;border:1.5px dashed var(--orange);border-radius:10px;color:#8a3b0f;font-size:.95rem}
+  .career{background:linear-gradient(90deg,#fff7f2,#fff);border:1px solid #ffd9c0;border-radius:var(--radius);padding:22px 26px;margin:0 0 34px;color:#4a2508}
+  .career b{color:#8a3b0f}
+  .nnn{display:block;background:rgba(255,255,255,.08);border-left:4px solid var(--orange);padding:16px 20px;margin:6px 0 30px;color:#e8eefb;font-size:1.02rem;max-width:46em;line-height:1.6;border-radius:0 8px 8px 0}
+  .nnn i{color:var(--orange);font-weight:700}
+  .teaser{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  @media (max-width:780px){.doors{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="stage-banner">STAGING PREVIEW — NOT THE LIVE SITE · groundgamestrategy.com/v2</div>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#002060"/>
+        <path d="M9 27 L20 13 L31 27" stroke="#0070C0" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 27 L20 18 L27 27" stroke="#FF7C3B" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="27" r="2.4" fill="#fff"/>
+      </svg>
+      <span>Ground Game Strategy<small>Connected Strategy</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../framework.html">The Framework</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="consulting.html">Consulting</a></li>
+      <li><a href="../insights.html">Insights</a></li>
+      <li><a class="nav-cta" href="courses.html">Browse Courses</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">For You</p>
+    <h2 style="max-width:22em">Become the person who brings strategy into your organization.</h2>
+    <div class="career">
+      <p style="margin:0"><b>Every organization needs one.</b> The person who can connect what teams are doing to what the company is trying to achieve &mdash; who knows what a good strategy looks like, how to build one, and how to make it stick. Almost nobody is trained for it. These courses close that gap, with a certification that grows with you.</p>
+    </div>
+    <div class="ladder">
+      <span class="rung r1">IVI</span><span class="ar">&rarr;</span>
+      <span class="rung r2">Strategy Essentials</span><span class="ar">&rarr;</span>
+      <span class="rung r3">Certified Strategist</span><span class="ar">&rarr;</span>
+      <span class="rung r4">Certified Trainer</span>
+    </div>
+    <div class="grid g-3">
+      <div class="card"><span class="cat-tag cat-core">CORE</span><h3>Strategy Essentials</h3><p class="meta">2 days</p><p>For the internal strategy champion bringing strategy formally into their organization for the first time.</p></div>
+      <div class="card"><span class="cat-tag cat-core">CORE</span><h3>VAST Certified Strategist</h3><p class="meta">5 days &middot; SIRF + SIRE</p><p>For the leader responsible for strategy &mdash; building and executing organizational strategy end to end.</p></div>
+      <div class="card"><span class="cat-tag cat-found">FOUNDATIONS</span><h3>Intent, Value &amp; Impact</h3><p class="meta">Personal strategy</p><p>How one person adds more value &mdash; for new employees and early-career professionals. Role editions for Product Managers and Project Managers.</p></div>
+      <div class="card"><span class="cat-tag cat-impact">IMPACT SESSION</span><h3>Before You Buy: Strategy for AI</h3><p class="meta">Decision workshop</p><p>Choose the right tool before committing budget &mdash; AI, cloud, CRM, any major purchase.</p></div>
+      <div class="card"><span class="cat-tag cat-impact">IMPACT SESSION</span><h3>LAMP: Leadership &amp; Management Performance</h3><p class="meta">Working session</p><p>Leaders and managers plan together &mdash; with roles swapped. Unfreezes the connection where strategy usually stalls.</p></div>
+    </div>
+    <div class="interest">&#128197; <b>First public cohorts are being scheduled now.</b> <a href="../contact.html">Join the interest list</a> and we&rsquo;ll hold you a seat before registration opens.</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap foot-bottom" style="padding-top:26px">
+    <span class="muted" style="font-size:.85rem">v2 staging preview &middot; the live site remains unchanged at <a href="../index.html">groundgamestrategy.com</a></span>
+  </div>
+</footer>
+<script src="../site.js"></script>
+</body>
+</html>
