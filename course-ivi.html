@@ -24,7 +24,8 @@
       <a href="courses.html">Courses</a>
       <a class="hide-sm" href="index.html#consulting">Consulting</a>
       <a class="hide-sm" href="insights.html">Insights</a>
-      <a class="cta" href="index.html#contact">Get in touch</a>
+      <a class="hide-sm" href="index.html#contact">Contact</a>
+      <a class="cta" href="#signup">Join the interest list</a>
     </div>
   </div>
 </nav>
@@ -35,6 +36,10 @@
     <span class="tagp t-found">FOUNDATIONS</span>
     <h1>IVI: Intent, Value &amp; Impact</h1>
     <p class="lead">A two-day interactive workshop for anyone who wants to add more value to their organization &mdash; and be able to <b>show it</b>.</p>
+    <div style="display:flex;gap:13px;flex-wrap:wrap;margin-top:26px">
+      <a href="#signup" style="display:inline-block;padding:15px 30px;border-radius:11px;font-weight:800;font-size:1rem;background:var(--orange);color:#331605;box-shadow:0 14px 34px -14px rgba(255,124,59,.75)">Join the interest list</a>
+      <a href="#agenda" style="display:inline-block;padding:15px 30px;border-radius:11px;font-weight:800;font-size:1rem;color:#fff;border:1.5px solid rgba(255,255,255,.42)">See the full agenda</a>
+    </div>
     <dl class="facts"><div><dt>Duration</dt><dd>2 days<small>8:30&ndash;4:30 daily</small></dd></div><div><dt>Format</dt><dd>In person<small>or live online</small></dd></div><div><dt>Level</dt><dd>Foundations<small>no prerequisites</small></dd></div><div><dt>Investment</dt><dd>$1,800<small>per seat</small></dd></div><div><dt>Credential</dt><dd>Certificate<small>of completion</small></dd></div></dl>
   </div>
 </header>
@@ -67,7 +72,7 @@
   </div>
 </section>
 
-<section>
+<section id="agenda">
   <div class="wrap">
     <p class="kick">The agenda</p>
     <h2>Eight sessions across two days.</h2>
@@ -161,22 +166,25 @@
           <div><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name"></div>
           <div><label for="f-email">Email <span style="color:#e0562a">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="frow">
-          <div><label for="f-org">Organization</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
-          <div><label for="f-format">Preferred format</label>
-            <select id="f-format" name="format">
-              <option>Either</option><option>In person</option><option>Live online</option>
-              <option>Private cohort for my organization</option>
-            </select></div>
-        </div>
-        <div class="frow">
-          <div><label for="f-timing">When would you attend?</label>
-            <select id="f-timing" name="timing">
-              <option>Next 3 months</option><option>3&ndash;6 months</option><option>Later this year</option><option>Just exploring</option>
-            </select></div>
-          <div><label for="f-msg">Anything we should know?</label><input id="f-msg" name="message" type="text" placeholder="Optional"></div>
-        </div>
-        <button class="btn btn-o" type="submit">Join the interest list</button>
+        <details class="more">
+          <summary>Add a few details (optional &mdash; helps us schedule)</summary>
+          <div class="frow" style="margin-top:12px">
+            <div><label for="f-org">Organization</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
+            <div><label for="f-format">Preferred format</label>
+              <select id="f-format" name="format">
+                <option>Either</option><option>In person</option><option>Live online</option>
+                <option>Private cohort for my organization</option>
+              </select></div>
+          </div>
+          <div class="frow">
+            <div><label for="f-timing">When would you attend?</label>
+              <select id="f-timing" name="timing">
+                <option>Next 3 months</option><option>3&ndash;6 months</option><option>Later this year</option><option>Just exploring</option>
+              </select></div>
+            <div><label for="f-msg">Anything we should know?</label><input id="f-msg" name="message" type="text" placeholder="Optional"></div>
+          </div>
+        </details>
+        <button class="btn btn-o" type="submit" style="width:100%;padding:16px">Join the interest list</button>
         <div class="formmsg" id="form-msg"></div>
         <p class="fine">No newsletter, no list-sharing. We&rsquo;ll email you about dates for this course and nothing else.</p>
       </form>
@@ -218,6 +226,13 @@
     </div>
   </div>
 </footer>
+
+<div class="enrollbar">
+  <div class="eb-name">Intent, Value &amp; Impact<small>2 days &middot; any function</small></div>
+  <div class="eb-price">$1,800<small>per seat</small></div>
+  <a class="bt ghost" href="courses.html">All courses</a>
+  <a class="bt" href="#signup">Join the interest list</a>
+</div>
 <script src="course.js"></script>
 </body>
 </html>

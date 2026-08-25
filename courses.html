@@ -46,7 +46,8 @@
       <a href="courses.html">Courses</a>
       <a class="hide-sm" href="index.html#consulting">Consulting</a>
       <a class="hide-sm" href="insights.html">Insights</a>
-      <a class="cta" href="index.html#contact">Get in touch</a>
+      <a class="hide-sm" href="index.html#contact">Contact</a>
+      <a class="cta" href="#signup">Join the interest list</a>
     </div>
   </div>
 </nav>
@@ -57,6 +58,10 @@
     <span class="tagp t-core">COURSE CATALOG</span>
     <h1>Become the person who brings strategy into your organization.</h1>
     <p class="lead">Every organization needs one &mdash; the person who can connect what teams are doing to what the company is trying to achieve. <b>Almost nobody is trained for it.</b> These courses close that gap, with a certification that grows with you.</p>
+    <div style="display:flex;gap:13px;flex-wrap:wrap;margin-top:26px">
+      <a href="#catalog" style="display:inline-block;padding:15px 30px;border-radius:11px;font-weight:800;font-size:1rem;background:var(--orange);color:#331605;box-shadow:0 14px 34px -14px rgba(255,124,59,.75)">See the courses</a>
+      <a href="#signup" style="display:inline-block;padding:15px 30px;border-radius:11px;font-weight:800;font-size:1rem;color:#fff;border:1.5px solid rgba(255,255,255,.42)">Join the interest list</a>
+    </div>
     <dl class="facts">
       <div><dt>Formats</dt><dd>In person<small>&amp; live online</small></dd></div>
       <div><dt>Length</dt><dd>2&ndash;5 days<small>fully facilitated</small></dd></div>
@@ -81,7 +86,7 @@
   </div>
 </section>
 
-<section class="cloud">
+<section class="cloud" id="catalog">
   <div class="wrap">
     <p class="kick">The catalog</p>
     <h2>Six courses. Four available now.</h2>
@@ -223,7 +228,6 @@
         <div><label for="f-email">Email <span style="color:#e0562a">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
       </div>
       <div class="frow">
-        <div><label for="f-org">Organization</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
         <div><label for="f-course">Which course?</label>
           <select id="f-course" name="course">
             <option>VAST Certified Strategist (5 days)</option>
@@ -235,18 +239,22 @@
             <option>Not sure yet &mdash; help me choose</option>
           </select></div>
       </div>
-      <div class="frow">
-        <div><label for="f-format">Preferred format</label>
-          <select id="f-format" name="format">
-            <option>Either</option><option>In person</option><option>Live online</option>
-            <option>Private cohort for my organization</option>
-          </select></div>
-        <div><label for="f-timing">When would you attend?</label>
-          <select id="f-timing" name="timing">
-            <option>Next 3 months</option><option>3&ndash;6 months</option><option>Later this year</option><option>Just exploring</option>
-          </select></div>
-      </div>
-      <button class="btn btn-o" type="submit">Join the interest list</button>
+      <details class="more">
+        <summary>Add a few details (optional &mdash; helps us schedule)</summary>
+        <div class="frow" style="margin-top:12px">
+          <div><label for="f-org">Organization</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
+          <div><label for="f-format">Preferred format</label>
+            <select id="f-format" name="format">
+              <option>Either</option><option>In person</option><option>Live online</option>
+              <option>Private cohort for my organization</option>
+            </select></div>
+          <div><label for="f-timing">When would you attend?</label>
+            <select id="f-timing" name="timing">
+              <option>Next 3 months</option><option>3&ndash;6 months</option><option>Later this year</option><option>Just exploring</option>
+            </select></div>
+        </div>
+      </details>
+      <button class="btn btn-o" type="submit" style="width:100%;padding:16px">Join the interest list</button>
       <div class="formmsg" id="form-msg"></div>
       <p class="fine">No newsletter, no list-sharing. We&rsquo;ll email you about course dates and nothing else.</p>
     </form>
@@ -305,6 +313,12 @@
     </div>
   </div>
 </footer>
+<div class="enrollbar">
+  <div class="eb-name">Ground Game courses<small>Live &amp; facilitated &middot; in person or online</small></div>
+  <div class="eb-price">2&ndash;5 days<small>from $1,800 per seat</small></div>
+  <a class="bt ghost" href="#catalog">See the courses</a>
+  <a class="bt" href="#signup">Join the interest list</a>
+</div>
 <script src="course.js"></script>
 </body>
 </html>

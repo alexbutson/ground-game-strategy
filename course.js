@@ -98,3 +98,20 @@ var FALLBACK_EMAIL = "hello@groundgamestrategy.com";    // <-- confirm this inbo
     });
   });
 })();
+
+/* ---- sticky enroll bar: reveal after the hero, hide over the signup form ---- */
+(function () {
+  var bar = document.querySelector('.enrollbar');
+  if (!bar) return;
+  var hero = document.querySelector('.chero');
+  var form = document.getElementById('signup');
+  function tick() {
+    var pastHero = !hero || (hero.getBoundingClientRect().bottom < 60);
+    var atForm = form && form.getBoundingClientRect().top < window.innerHeight * 0.9
+                      && form.getBoundingClientRect().bottom > 0;
+    bar.classList.toggle('show', pastHero && !atForm);
+  }
+  window.addEventListener('scroll', tick, { passive: true });
+  window.addEventListener('resize', tick);
+  tick();
+})();

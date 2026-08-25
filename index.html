@@ -36,21 +36,46 @@
   .hero{background:radial-gradient(1100px 600px at 85% -10%, rgba(0,112,192,.55), transparent 60%),
               radial-gradient(800px 500px at -10% 110%, rgba(255,124,59,.25), transparent 55%),
               linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
-        color:#fff;padding:110px 0 90px;position:relative;overflow:hidden}
+        color:#fff;padding:56px 0 72px;position:relative;overflow:hidden}
   .eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
-  .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.08;letter-spacing:-.015em;max-width:15em}
-  .hero .lead{margin-top:22px;font-size:clamp(1.05rem,1.6vw,1.25rem);color:#c5d4ee;max-width:44em}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15em}
+  .hero .lead{margin-top:18px;font-size:clamp(1.05rem,1.6vw,1.25rem);color:#c5d4ee;max-width:44em}
   .hero .lead b{color:#fff}
   .scroll-hint{margin-top:46px;color:#8fa3c4;font-size:.82rem;letter-spacing:.12em;font-weight:600}
   .scroll-hint span{display:inline-block;animation:bob 1.8s ease-in-out infinite}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+  .herocta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:28px}
+  .bt{display:inline-block;padding:15px 30px;border-radius:11px;font-weight:800;font-size:1rem;transition:transform .15s,box-shadow .15s}
+  .bt:hover{transform:translateY(-2px)}
+  .bt-pri{background:var(--orange);color:#331605;box-shadow:0 14px 34px -14px rgba(255,124,59,.75)}
+  .bt-sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.42)}
+  .bt-sec:hover{border-color:#fff}
+  .herohint{font-size:.86rem;color:#9fb4d8;margin-top:14px}
+  .herohint b{color:#e8eefb}
+  .said{font-size:.95rem;color:#a8bcdd;margin-top:10px;font-weight:600;letter-spacing:.01em}
+  /* sticky mobile CTA */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;gap:10px;padding:10px 14px;
+      background:rgba(4,34,63,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.12)}
+    .mbar a{flex:1;text-align:center;padding:13px 8px;border-radius:10px;font-weight:800;font-size:.9rem}
+    .mbar .p{background:var(--orange);color:#331605}
+    .mbar .s{background:rgba(255,255,255,.1);color:#fff}
+    body{padding-bottom:66px}
+  }
   /* doors */
-  .doors{display:grid;grid-template-columns:1.12fr 1.12fr .9fr;gap:22px;margin-top:64px}
+  .doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px;align-items:stretch}
   @media(max-width:860px){.doors{grid-template-columns:1fr}}
   .door{border-radius:18px;padding:30px 30px 26px;display:flex;flex-direction:column;gap:10px;transition:transform .22s ease, box-shadow .22s ease}
   .door:hover{transform:translateY(-5px);box-shadow:0 24px 60px -24px rgba(0,0,0,.45)}
   .door .who{font-size:.68rem;font-weight:800;letter-spacing:.16em}
   .door h3{font-family:var(--serif);font-size:1.42rem;line-height:1.22;font-weight:600}
+  .d-you h3{font-size:1.72rem}
+  .picks{display:grid;gap:7px;margin:14px 0 4px}
+  .picks a{display:flex;justify-content:space-between;gap:12px;background:rgba(255,255,255,.72);border-radius:9px;padding:9px 13px;font-size:.86rem;font-weight:700;color:#2a1202;transition:background .15s}
+  .picks a:hover{background:#fff}
+  .picks a span{font-weight:600;color:#7a3a12;white-space:nowrap}
+
   .door p{font-size:.94rem;flex:1}
   .door .go{font-weight:700;font-size:.9rem;margin-top:8px}
   .d-org{background:#fff}
@@ -126,10 +151,12 @@
     <div class="links">
       <a href="#problem">The Problem</a>
       <a href="#vast">VAST</a>
+      <a href="#who">Who we are</a>
       <a href="courses.html">Courses</a>
       <a href="#consulting">Consulting</a>
       <a class="hide-sm" href="insights.html">Insights</a>
-      <a class="cta" href="#contact">Get in touch</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="courses.html">Browse courses</a>
     </div>
   </div>
 </nav>
@@ -138,19 +165,31 @@
   <div class="wrap">
     <p class="eyebrow">Connected Strategy</p>
     <h1>Everyone&rsquo;s busy.<br>Almost nobody&rsquo;s connected.</h1>
-    <p class="lead">Departments deliver. Teams transform. And the results still don&rsquo;t arrive &mdash; because the work isn&rsquo;t <b>connected</b> to what the organization is trying to achieve. We fix the connection.</p>
+    <p class="lead">Your teams deliver. Your departments hit their goals. And the organization still doesn&rsquo;t get where it said it was going &mdash; because none of that work is <b>connected</b> to what the company is actually trying to achieve.</p>
+    <p class="said">We train the person who can connect it, and we build the strategy that does. The first thing you get back is the ability to say <b style="color:var(--orange)">&ldquo;no, not now&rdquo;</b> &mdash; and stop paying for work that was never going to matter.</p>
+    <div class="herocta">
+      <a class="bt bt-pri" href="courses.html">Browse the courses</a>
+      <a class="bt bt-sec" href="#contact">Book a 30-min call</a>
+    </div>
+    <p class="herohint">First public cohorts are being scheduled now. <b>Join the interest list</b> and we&rsquo;ll hold you a seat before registration opens.</p>
     <div class="doors">
+      <div class="door d-you rv">
+        <span class="who">FOR YOU &middot; COURSES</span>
+        <h3>Become the strategy person in your organization.</h3>
+        <p>Live, facilitated courses &mdash; in person or online. A ladder you keep climbing, not a one-off class.</p>
+        <div class="picks">
+          <a href="course-vast-certified-strategist.html">VAST Certified Strategist <span>5 days</span></a>
+          <a href="course-ivi.html">Intent, Value &amp; Impact <span>2 days</span></a>
+          <a href="course-strategy-for-product-managers.html">Strategy for Product Managers <span>2 days</span></a>
+          <a href="course-before-you-buy-ai.html">Before You Buy: AI <span>2 days</span></a>
+        </div>
+        <a class="go" href="courses.html">All courses, agendas &amp; dates &rarr;</a>
+      </div>
       <a class="door d-org rv" href="#consulting">
         <span class="who">FOR YOUR ORGANIZATION</span>
         <h3>Connect every team to the outcome.</h3>
         <p>Consulting and private workshops that build your strategy, cascade it to every department, and measure the impact &mdash; starting immediately.</p>
         <span class="go">See how it works &darr;</span>
-      </a>
-      <a class="door d-you rv" href="courses.html">
-        <span class="who">FOR YOU</span>
-        <h3>Become the strategy person in your organization.</h3>
-        <p>Certified courses from a 2-day essentials credential to a full strategist certification &mdash; a ladder you keep climbing, not a one-off class.</p>
-        <span class="go">Browse the courses &rarr;</span>
       </a>
       <a class="door d-firm rv" href="#alliance">
         <span class="who">FOR CONSULTING FIRMS</span>
@@ -159,7 +198,7 @@
         <span class="go">Start a conversation &darr;</span>
       </a>
     </div>
-    <p class="scroll-hint">SCROLL <span>&darr;</span></p>
+    
   </div>
 </header>
 
@@ -180,8 +219,8 @@
 <section id="vast">
   <div class="wrap">
     <p class="kick" style="color:var(--blue)">The framework</p>
-    <h2>VAST doesn&rsquo;t replace what you do. It connects it.</h2>
-    <p class="sub">VAST &mdash; Value Adaptive Strategy &mdash; is delivery-agnostic. Agile, SAFe, Scrum, OCM, waterfall, or your own practice: VAST aligns the whole organization first (vision, top OKRs, every function), then connects the work you already do to the value the client receives.</p>
+    <h2>One strategy, connected from the boardroom to the team doing the work.</h2>
+    <p class="sub">VAST &mdash; Value Adaptive Strategy &mdash; builds the strategy, cascades it to every function, measures the impact, and adapts on a cadence. It is delivery-agnostic: Agile, SAFe, Scrum, OCM, waterfall or your own practice keeps running exactly as it does. <b>VAST doesn&rsquo;t replace how you work &mdash; it connects it to what the work is for.</b></p>
     <div class="grid g3">
       <div class="card rv"><h3>Strategy developed</h3><p>Vision, mission, focus areas, and a strategy map the whole leadership team built &mdash; not somebody&rsquo;s assistant.</p></div>
       <div class="card rv"><h3>Cascaded to every team</h3><p>Departmental maps every year, connected upward &mdash; so all work traces to the outcome, whatever methodology runs the work.</p></div>
@@ -196,7 +235,34 @@
   </div>
 </div>
 
-<section id="courses" style="background:var(--cloud)">
+
+<section id="who" style="background:var(--cloud)">
+  <div class="wrap">
+    <p class="kick" style="color:var(--blue)">Who&rsquo;s behind it</p>
+    <h2>Built by a practitioner, not a content shop.</h2>
+    <p class="sub">VAST was created independently of the Balanced Scorecard, and extends it. It comes out of building and executing strategy inside real organizations &mdash; and years of teaching it in rooms full of executives.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
+      <a class="bt bt-pri" href="courses.html">See the courses</a>
+      <a class="bt" style="background:var(--navy);color:#fff" href="#contact">Book a 30-min call</a>
+    </div>
+
+    <!-- =====================================================================
+         ADAM: this section needs your copy before it earns its place.
+           1. A short bio in your own words.
+           2. Any credentials you will name publicly (institute, academy,
+              accreditations) - left out for now given the anonymity you
+              asked to keep.
+           3. Client results you can personally stand behind and evidence.
+
+         A proof strip was drafted here using three figures from the Aug 24
+         call notes. REMOVED - they read as teaching examples about other
+         organizations, not Ground Game's own work. Do not restore them.
+         Replace with results we own, or leave this empty.
+         ===================================================================== -->
+  </div>
+</section>
+
+<section id="courses">
   <div class="wrap">
     <p class="kick" style="color:#8a3b0f">For you</p>
     <h2>Become the person who brings strategy into your organization.</h2>
@@ -227,7 +293,7 @@
       <div class="card rv"><h3 style="color:var(--orange)">Holistic</h3><p>Every function &mdash; product, HR, marketing, finance &mdash; pointed at the same outcomes, whatever methodology each team runs.</p></div>
       <div class="card rv"><h3 style="color:var(--orange)">Measured</h3><p>Strategy developed, cascaded to teams, impact measured, adapted over time. Everything counts, or it doesn&rsquo;t happen.</p></div>
     </div>
-    <div style="margin-top:44px" class="rv"><a class="btn btn-o" href="#contact">Talk to us about your organization</a></div>
+    <div style="margin-top:44px" class="rv"><a class="btn btn-o" href="#contact">Book a 30-min call</a></div>
   </div>
 </section>
 
@@ -235,7 +301,7 @@
   <div class="wrap">
     <div class="teaser rv">
       <p><b>Run a boutique consulting firm?</b> A founding alliance is forming around this methodology &mdash; shared language, a benchmark, and a two-way referral street. The founding cohort caps at 10&ndash;15 firms.</p>
-      <a class="btn btn-n" href="#contact">Start a conversation</a>
+      <a class="btn btn-n" href="#contact">Book a 30-min call</a>
     </div>
   </div>
 </section>
@@ -244,7 +310,7 @@
   <div class="wrap" style="text-align:center">
     <h2 style="margin:0 auto">Let&rsquo;s talk.</h2>
     <p class="sub" style="margin:16px auto 34px;max-width:38em">A free thirty-minute conversation about your organization, your career, or your firm. No commitment.</p>
-    <a class="btn btn-o" href="contact.html">Get in touch</a>
+    <a class="btn btn-o" href="contact.html">Book a 30-min call</a>
   </div>
 </section>
 
@@ -259,5 +325,9 @@
   const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
+<div class="mbar">
+  <a class="p" href="courses.html">Browse courses</a>
+  <a class="s" href="#contact">Talk to us</a>
+</div>
 </body>
 </html>

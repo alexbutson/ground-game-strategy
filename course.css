@@ -193,3 +193,31 @@ footer a{color:#cfdcf2}
   .links{gap:12px;font-size:.78rem}
   .links a.cta{padding:7px 12px}
 }
+
+/* ---- sticky enroll bar (course pages) ---- */
+.enrollbar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;align-items:center;gap:20px;
+  min-height:72px;padding:12px 28px;background:rgba(4,34,63,.97);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(255,255,255,.13);transform:translateY(110%);transition:transform .28s ease}
+.enrollbar.show{transform:none}
+.enrollbar .eb-name{font-weight:800;color:#fff;font-size:.98rem;line-height:1.25}
+.enrollbar .eb-name small{display:block;font-weight:600;font-size:.78rem;color:#9fb4d8;margin-top:2px}
+.enrollbar .eb-price{margin-left:auto;text-align:right;color:#fff;font-family:var(--serif);font-size:1.25rem;font-weight:600;white-space:nowrap}
+.enrollbar .eb-price small{display:block;font-family:var(--font);font-size:.72rem;font-weight:500;color:#9fb4d8}
+.enrollbar .bt{padding:12px 24px;border-radius:10px;font-weight:800;font-size:.92rem;background:var(--orange);color:#331605;white-space:nowrap}
+.enrollbar .bt.ghost{background:rgba(255,255,255,.11);color:#fff}
+body{padding-bottom:88px}
+@media(max-width:760px){
+  .enrollbar{gap:10px;padding:10px 14px}
+  .enrollbar .eb-name{display:none}
+  .enrollbar .eb-price{margin-left:0;font-size:1.05rem}
+  .enrollbar .bt{flex:1;text-align:center;padding:13px 8px}
+  .enrollbar .bt.ghost{display:none}
+}
+
+/* ---- lighter form: optional details collapsed ---- */
+.more{margin:6px 0 16px}
+.more>summary{list-style:none;cursor:pointer;font-size:.86rem;font-weight:700;color:var(--blue);padding:6px 0}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::before{content:"+ ";font-weight:800}
+.more[open]>summary::before{content:"– "}
+.dark .more>summary{color:#8fc4f5}
